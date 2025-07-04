@@ -1,6 +1,8 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
 
+  console.log("✅ Endpoint recibido correctamente");
+
   const { nombre, email, canal, resumen } = req.body;
 
   const slackWebhook = "https://hooks.slack.com/services/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"; // ← Pega tu webhook aquí
